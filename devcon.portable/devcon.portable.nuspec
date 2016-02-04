@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>devcon.portable</id>
+    <title>DevCon (Portable)</title>
+    <version>10.0.10586.0</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <summary>Device Console (DevCon) Tool (Portable)</summary>
+    <description>
+[DevCon](http://msdn.microsoft.com/en-us/library/windows/hardware/ff544707) is a command-line tool that displays detailed information about devices, and lets you search for and manipulate devices from the command line. DevCon enables, disables, installs, configures, and removes devices on the local computer and displays detailed information about devices on local and remote computers. DevCon is included in the WDK.
+    </description>
+    <projectUrl>https://msdn.microsoft.com/en-us/windows/hardware/hh852365</projectUrl>
+    <packageSourceUrl>https://github.com/PlagueHO/devcon-choco-package</packageSourceUrl>
+    <projectSourceUrl>https://github.com/Microsoft/Windows-driver-samples/tree/master/setup/devcon</projectSourceUrl>
+    <tags>DevCon DeviceConsole WDK WindowsDriverKit</tags>
+    <copyright>Copyright (c) 2015 Microsoft</copyright>
+    <licenseUrl>https://github.com/Microsoft/Windows-driver-samples/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+  </metadata>
+</package>
