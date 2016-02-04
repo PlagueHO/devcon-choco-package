@@ -34,4 +34,6 @@ deploy_script:
       Copy-Item -Path .\Windows-driver-samples\setup\devcon\Release\devcon.exe `
         -Destination .\devcon.portable\
       Set-Location -Path .\devcon.portable\
+      (Get-Content '.\devcon.portable.nuspec' -Raw).Replace("<version>1.0</version>", "<version>$($env:APPVEYOR_BUILD_VERSION)</version>") | Out-File '.\devcon.portable.nuspec'
       cpack
+      Push-AppveyorArtifact ".\devcon.portable.$($ENV:APPVEYOR_BUILD_VERSION).nupkg"
