@@ -3,15 +3,16 @@
 #---------------------------------#
 os: WMF 5
 version: 10.0.10586.{build}
+install:
+   - git clone https://github.com/Microsoft/Windows-driver-samples.git
+   - cd Windows-driver-samples\setup\devcon\
+   - msbuild /t:clean /t:build .\devcon.vcxproj.
 
 #---------------------------------#
 #      build configuration        #
 #---------------------------------#
 
-build:
-   - git clone https://github.com/Microsoft/Windows-driver-samples.git
-   - cd Windows-driver-samples\setup\devcon\
-   - msbuild /t:clean /t:build .\devcon.vcxproj.
+build: false
 
 #---------------------------------#
 #      test configuration         #
