@@ -32,3 +32,8 @@ test_script: none
 
 deploy_script:
   - ps: |
+      # Create Chocolately Package
+      Copy-Item -Path .\Windows-driver-samples\setup\devcon\Release\devcon.exe `
+        -ChildPath .\devcon.portable\
+      cd .\devcon.portable\
+      cpack
