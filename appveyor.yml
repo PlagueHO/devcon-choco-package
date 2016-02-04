@@ -7,7 +7,7 @@ version: 10.0.10586.{build}
 
 configuration: Release
 
-platform: Any
+platform: Any CPU
 
 install:
    - git clone https://github.com/Microsoft/Windows-driver-samples.git
@@ -16,9 +16,10 @@ install:
 #      build configuration        #
 #---------------------------------#
 
-build:
-  project: Windows-driver-samples\setup\devcon\devcon.vcxproj
-  verbosity: normal
+build_script:
+   - cmd: >-
+       msbuild "Windows-driver-samples\setup\devcon\devcon.vcxproj" /p:Configuration=Release|Win32 /t:Clean;Build /verbosity:normal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" 
+       msbuild "Windows-driver-samples\setup\devcon\devcon.vcxproj" /p:Configuration=Release|x64 /t:Clean;Build/verbosity:normal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 #---------------------------------#
 #      test configuration         #
