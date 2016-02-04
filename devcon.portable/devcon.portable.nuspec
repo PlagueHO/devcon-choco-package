@@ -10,6 +10,12 @@
     <summary>Device Console (DevCon) Tool (Portable)</summary>
     <description>
 [DevCon](http://msdn.microsoft.com/en-us/library/windows/hardware/ff544707) is a command-line tool that displays detailed information about devices, and lets you search for and manipulate devices from the command line. DevCon enables, disables, installs, configures, and removes devices on the local computer and displays detailed information about devices on local and remote computers. DevCon is included in the WDK.
+
+This pacakge includes both an x86 and an x64 version of the DevCon application:
+* DevCon32.exe
+* DevCon64.exe
+
+Please use the version applicable to your Operating System.
     </description>
     <projectUrl>https://msdn.microsoft.com/en-us/windows/hardware/hh852365</projectUrl>
     <packageSourceUrl>https://github.com/PlagueHO/devcon-choco-package</packageSourceUrl>
