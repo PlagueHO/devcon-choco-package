@@ -3,26 +3,34 @@
 #---------------------------------#
 os: WMF 5
 version: 10.0.10586.{build}
+
+configuration:
+   - Debug
+   - Release
+
+platform: Any CPU
+
 install:
    - git clone https://github.com/Microsoft/Windows-driver-samples.git
    - cd Windows-driver-samples\setup\devcon\
-   - msbuild /t:clean /t:build .\devcon.vcxproj.
 
 #---------------------------------#
 #      build configuration        #
 #---------------------------------#
 
-build: false
+build:
+  project: Windows-driver-samples\setup\devcon\devcon.vcxproj
+  verbosity: normal
 
 #---------------------------------#
 #      test configuration         #
 #---------------------------------#
 
-test_script: false
+test_script: none
 
 #---------------------------------#
 #      deployment configuration   #
 #---------------------------------#
 
-# scripts to run before deployment
-deploy_script: false
+deploy_script:
+  - ps: |
