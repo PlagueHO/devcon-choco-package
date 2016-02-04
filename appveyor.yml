@@ -2,13 +2,12 @@
 #      environment configuration  #
 #---------------------------------#
 os: WMF 5
+
 version: 10.0.10586.{build}
 
-configuration:
-   - Debug
-   - Release
+configuration: Release
 
-platform: Any CPU
+platform: x86
 
 install:
    - git clone https://github.com/Microsoft/Windows-driver-samples.git
