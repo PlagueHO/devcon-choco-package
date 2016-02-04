@@ -17,11 +17,8 @@ install:
 #---------------------------------#
 
 build_script:
-   - cmd: >-
-msbuild "Windows-driver-samples\setup\devcon\devcon.vcxproj" /p:Configuration=Release;Platform=Win32 /t:Clean;Build /verbosity:normal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-
-
-msbuild "Windows-driver-samples\setup\devcon\devcon.vcxproj" /p:Configuration=Release;Platform=x64 /t:Clean;Build /verbosity:normal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+   - cmd: msbuild "Windows-driver-samples\setup\devcon\devcon.vcxproj" /p:Configuration=Release;Platform=Win32 /t:Clean;Build /verbosity:normal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+   - cmd: msbuild "Windows-driver-samples\setup\devcon\devcon.vcxproj" /p:Configuration=Release;Platform=x64 /t:Clean;Build /verbosity:normal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 #---------------------------------#
 #      test configuration         #
