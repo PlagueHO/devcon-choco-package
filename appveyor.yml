@@ -32,7 +32,9 @@ deploy_script:
   - ps: |
       # Create Chocolately Package
       Copy-Item -Path .\Windows-driver-samples\setup\devcon\Release\devcon.exe `
-        -Destination .\devcon.portable\
+        -Destination .\devcon.portable\Devcon32.exe
+      Copy-Item -Path .\Windows-driver-samples\setup\devcon\x64\Release\devcon.exe `
+        -Destination .\devcon.portable\Devcon64.exe
       Set-Location -Path .\devcon.portable\
       (Get-Content '.\devcon.portable.nuspec' -Raw).Replace("<version>1.0</version>", "<version>$($env:APPVEYOR_BUILD_VERSION)</version>") | Out-File '.\devcon.portable.nuspec'
       cpack
