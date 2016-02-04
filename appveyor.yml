@@ -24,7 +24,7 @@ build:
 #      test configuration         #
 #---------------------------------#
 
-test_script: none
+test_script: off
 
 #---------------------------------#
 #      deployment configuration   #
