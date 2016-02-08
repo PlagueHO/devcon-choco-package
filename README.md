@@ -7,6 +7,16 @@ This project contains several files:
  2. Devcon.Portable.Nuspec - the Chocolatey package definition.
  3. Devcon32.exe - the 32-bit Devcon.exe found in the Windows Driver Kit (WDK) for Windows 10. MD5: b14f9ffbeaaab08167e6223cac933b22
  4. Devcon64.exe - the 64-bit Devcon.exe found in the Windows Driver Kit (WDK) for Windows 10. MD5: 79c8395d54fa2e32425a56807240523b
+ 
+## Windows Driver Kit (WDK)
+The Devcon.exe (both the 32-bit and 64-bit versions) can be found in the Windows Device Kit (WDK).
+The WDK installer can be downloaded from [here](http://go.microsoft.com/fwlink/p/?LinkId=526733).
+The WDK installer will then download approximately 800MB and will require an approximately 2.5GB install footprint.
+Once the WDK is installed the DevCon application files can be found:
+ * 32-bit: c:\program files\Windows Kits\10\Tools\x86\Devcon.exe
+ * 64-bit: c:\program files\Windows Kits\10\Tools\x64\Devcon.exe
+
+The purpose of this project is to allow the use of the DevCon tool without requiring an 800MB download and 2.5GB install.
 
 ## Current Project Process
  1. Set the version number of the Chocolatey package definition (devcon.portable.nuspec) to match the AppVeyor build version.
