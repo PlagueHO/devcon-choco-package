@@ -1,16 +1,18 @@
 # devcon-choco-package
-Chocolatey package definition for installing DevCon (Microsoft Device Console)
+Chocolatey package definition for installing DevCon (Microsoft Device Console).
+These files are obtained from the WDK for Windows 10 build 1607.
 
 ## Project Details
 This project contains several files:
  1. AppVeyor.yml - the AppVeyor.YML CI definition that will automatically build the DevCon.exe and package it into a Nuget package for submission to Chocolatey.
  2. Devcon.Portable.Nuspec - the Chocolatey package definition.
- 3. Devcon32.exe - the 32-bit Devcon.exe found in the Windows Driver Kit (WDK) for Windows 10. MD5: b14f9ffbeaaab08167e6223cac933b22
- 4. Devcon64.exe - the 64-bit Devcon.exe found in the Windows Driver Kit (WDK) for Windows 10. MD5: 79c8395d54fa2e32425a56807240523b
- 
+ 3. Devcon32.exe - the 32-bit Devcon.exe found in the Windows Driver Kit (WDK) for Windows 10. SHA256: E779664403C8CFCA9CA115E4AB46794922D3B39B8EC98A3B7A30D323FAF02B5E MD5: EBE2414F870597900228A7F87AE00B8D
+ 4. Devcon64.exe - the 64-bit Devcon.exe found in the Windows Driver Kit (WDK) for Windows 10. SHA256: 6CDF9A5C39FC9E765CD7232BDB6AEAA3D2811BCBBF6875C4DECC5D6C8BF308EA MD5: 2F429A7437B47EE774F9C7318B99AA0C
+
 ## Windows Driver Kit (WDK)
 The Devcon.exe (both the 32-bit and 64-bit versions) can be found in the Windows Device Kit (WDK).
 The WDK installer can be downloaded from [here](http://go.microsoft.com/fwlink/p/?LinkId=526733).
+For more information on downloading the WDK and associated tools, see [this page](https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit).
 The WDK installer will then download approximately 800MB and will require an approximately 2.5GB install footprint.
 Once the WDK is installed the DevCon application files can be found:
  * 32-bit: c:\program files\Windows Kits\10\Tools\x86\Devcon.exe

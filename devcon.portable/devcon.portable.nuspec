@@ -16,6 +16,11 @@ This pacakge includes both an x86 and an x64 version of the DevCon application:
 * DevCon64.exe
 
 Please use the version applicable to your Operating System.
+
+These files are obtained from the WDK for Windows 10 build 1607.
+The Devcon.exe (both the 32-bit and 64-bit versions) can be found in the Windows Device Kit (WDK).
+The WDK installer can be downloaded from [here](http://go.microsoft.com/fwlink/p/?LinkId=526733).
+For more information on downloading the WDK and associated tools, see [this page](https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit).
     </description>
     <projectUrl>https://msdn.microsoft.com/en-us/windows/hardware/hh852365</projectUrl>
     <packageSourceUrl>https://github.com/PlagueHO/devcon-choco-package</packageSourceUrl>
